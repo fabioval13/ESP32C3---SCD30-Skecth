@@ -16,6 +16,7 @@ Wi-Fi: integrato
 Clock: sincronizzato via NTP
 
 🧠 Architettura logica
+
 1️⃣ Gestione Wi-Fi e Web Server
 Si connette alla rete Wi-Fi:
 
