@@ -1,10 +1,10 @@
 
 Lo sketch realizza un monitor di qualità dell’aria basato su sensore Sensirion SCD30, con:
-misura di CO₂, temperatura e umidità
-display OLED
-web server integrato per monitoraggio e configurazione
-sincronizzazione oraria via NTP
-salvataggio configurazioni in flash (Preferences)
+- misura di CO₂, temperatura e umidità
+- display OLED
+- web server integrato per monitoraggio e configurazione
+- sincronizzazione oraria via NTP
+- salvataggio configurazioni in flash (Preferences)
 È pensato per ESP32 / ESP8266 (con codice condizionale), in particolare ESP32-C3 / ESP32-S3.
 
 🔌 Hardware utilizzato
