@@ -108,5 +108,3 @@ UI web + OLED
 configurazione persistente
 
 gestione tempo reale pulita
-
-pronto per uso continuo (ambienti, scuole, uffici)
