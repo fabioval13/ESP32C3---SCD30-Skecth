@@ -27,11 +27,13 @@ Lo sketch realizza un monitor di qualità dell’aria basato su sensore Sensirio
 - Clock: sincronizzato via NTP
 
 🧠 Architettura logica
+
 1️⃣ Gestione Wi-Fi e Web Server
 
 Si connette alla rete Wi-Fi:
 
 ssid = "your ssid"
+
 password = "your password"
 
 
@@ -42,6 +44,7 @@ Espone due pagine web:
 / → monitor valori
 
 /config → configurazione sensore
+
 
 2️⃣ Lettura sensore SCD30
 
@@ -63,6 +66,7 @@ I valori vengono separati in:
 
 👉 Questo evita continui refresh di display e web.
 
+
 3️⃣ Gestione display OLED
 
 Aggiornato ogni 30 secondi
@@ -76,6 +80,7 @@ Mostra:
 - temperatura e umidità
 
 Usa librerie Adafruit GFX + SSD1306
+
 
 4️⃣ Web interface (monitor)
 
@@ -93,6 +98,7 @@ La pagina principale (/) mostra:
 
 🔄 La pagina si auto-aggiorna ogni 30 s
 
+
 5️⃣ Web interface (configurazione)
 
 Pagina /config con:
@@ -109,6 +115,7 @@ Al salvataggio:
 
 - salvati in flash NVS (Preferences)
 
+
 6️⃣ Persistenza dati (Preferences)
 
 Usa lo storage NVS per:
@@ -118,6 +125,7 @@ Usa lo storage NVS per:
 - stato ASC (asc)
 
 👉 Le impostazioni restano dopo reboot o power-off
+
 
 7️⃣ Sincronizzazione oraria NTP
 
@@ -131,6 +139,7 @@ Mostra l’ora dell’ultima misura
 
 Se NTP fallisce → mantiene l’ultima ora valida
 
+
 8️⃣ Gestione temporizzazioni (NON bloccante)
 
 Usa millis() per:
@@ -140,6 +149,7 @@ Usa millis() per:
 - aggiornamento display/web → ogni 30 s
 
 👉 Nessun delay() nel loop → sistema reattivo
+
 
 🔁 Flusso del loop principale
 
@@ -164,6 +174,7 @@ Ogni 30 s stampa:
 - CO2=xxx ppm  T=yy.y C  H=zz.z
 - Ora NTP: hh:mm:ss
 
+
 ✅ In sintesi
 
 Questo sketch è un sistema completo di monitoraggio CO₂ con:
@@ -175,3 +186,4 @@ Questo sketch è un sistema completo di monitoraggio CO₂ con:
 configurazione persistente
 
 gestione tempo reale pulita
+
