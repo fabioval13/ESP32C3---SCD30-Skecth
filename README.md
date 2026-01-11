@@ -79,7 +79,7 @@ Mostra:
 
 - temperatura e umidità
 
-Usa librerie Adafruit GFX + SSD1306
+Usa librerie Adafruit e SparkFun
 
 
 4️⃣ Web interface (monitor)
